@@ -54,6 +54,7 @@ func ReceiveMessage(queueName string) ([]*sqs.Message, error) {
 	}
 	return resp.Messages, nil
 }
+
 func GetQueueUrl(name string) (*string, error) {
 	url, ok := queueUrlCache[name]
 	if ok {
